@@ -1,2 +1,358 @@
-test file
-test code for shital
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="stylesheet.css">
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+  <title>Project Dashboard</title>
+</head>
+
+<body>
+  <section id="header">
+    <nav class="navbar navbar-dark bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <img src="Logo.png" alt="" width="30" height="24" class="d-inline-block align-text-top">
+          Random Dragon Inc.
+        </a>
+        <a class="navbar-brand">Welcome</a>
+        <form class="d-flex">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+        <button class="btn btn-light" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"
+          aria-controls="offcanvasRight"><svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24"
+            height="24px" viewBox="0 0 24 24" width="24px" fill="#000000">
+            <g>
+              <rect fill="none" height="24" width="24" />
+            </g>
+            <g>
+              <g>
+                <rect height="8.48" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -6.8717 17.6255)" width="3" x="16.34"
+                  y="12.87" />
+                <path
+                  d="M17.5,10c1.93,0,3.5-1.57,3.5-3.5c0-0.58-0.16-1.12-0.41-1.6l-2.7,2.7L16.4,6.11l2.7-2.7C18.62,3.16,18.08,3,17.5,3 C15.57,3,14,4.57,14,6.5c0,0.41,0.08,0.8,0.21,1.16l-1.85,1.85l-1.78-1.78l0.71-0.71L9.88,5.61L12,3.49 c-1.17-1.17-3.07-1.17-4.24,0L4.22,7.03l1.41,1.41H2.81L2.1,9.15l3.54,3.54l0.71-0.71V9.15l1.41,1.41l0.71-0.71l1.78,1.78 l-7.41,7.41l2.12,2.12L16.34,9.79C16.7,9.92,17.09,10,17.5,10z" />
+              </g>
+            </g>
+          </svg></button>
+
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+          <div class="offcanvas-header">
+            <h5 id="offcanvasRightLabel">Offcanvas right</h5>
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <div class="Offcanvas-content">
+              <div class="offcanvas-section">
+                <h2 class="text-light">Profile</h2>
+                <form action="index.php" method="post" class="form-control-borderless" onsubmit="return false;">
+                  <div class="form-group">
+                    <label for="side-profile-name">Name</label>
+                    <input type="text" id="side-profile-name" name="side-profile-name" class="form-control"
+                      value="John Doe">
+                  </div>
+                  <div class="form-group">
+                    <label for="side-profile-email">Email</label>
+                    <input type="email" id="side-profile-email" name="side-profile-email" class="form-control"
+                      placeholder="john.doe@example.com">
+                  </div>
+                  <div class="form-group">
+                    <label for="side-profile-password">New Password</label>
+                    <input type="password" id="side-profile-password" name="side-profile-password" class="form-control">
+                  </div>
+                  <div class="form-group">
+                    <label for="side-profile-password-confirm">Confirm New Password</label>
+                    <input type="password" id="side-profile-password-confirm" name="side-profile-password-confirm"
+                      class="form-control">
+                  </div>
+                  <div class="form-group remove-margin">
+                    <button type="submit" class="btn btn-effect-ripple btn-primary"
+                      onclick="App.sidebar('close-sidebar-alt');"
+                      style="overflow: hidden; position: relative;">Save</button>
+                  </div>
+                </form>
+              </div>
+              <div class="offcanvas-section">
+                <h2 class="text-light">Settings</h2>
+                <form action="index.php" method="post" class="form-horizontal form-control-borderless"
+                  onsubmit="return false;">
+                  <div class="form-group">
+                    <label class="col-xs-7 control-label-fixed">Notifications</label>
+                    <div class="col-xs-5">
+                      <label class="switch switch-success"><input type="checkbox" checked=""><span></span></label>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-xs-7 control-label-fixed">Public Profile</label>
+                    <div class="col-xs-5">
+                      <label class="switch switch-success"><input type="checkbox" checked=""><span></span></label>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-xs-7 control-label-fixed">Enable API</label>
+                    <div class="col-xs-5">
+                      <label class="switch switch-success"><input type="checkbox"><span></span></label>
+                    </div>
+                  </div>
+                  <div class="form-group remove-margin">
+                    <button type="submit" class="btn btn-effect-ripple btn-primary"
+                      onclick="App.sidebar('close-sidebar-alt');"
+                      style="overflow: hidden; position: relative;">Save</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button type="button" class="btn btn-light">Light</button>
+      </div>
+    </nav>
+  </section>
+  <div class="row">
+    <section id="sidebar" class="col-3">
+      <div class="flex-shrink-0 p-3 bg-primary">
+        <a href="/" class="d-flex align-items-center pb-3 mb-3 link-dark text-decoration-none border-bottom">
+          <svg class="bi me-2" width="30" height="24">
+            <use xlink:href="#bootstrap"></use>
+          </svg>
+          <span class="fs-5 fw-semibold">Collapsible</span>
+        </a>
+        <ul class="list-unstyled ps-0">
+          <li class="mb-1">
+            <button class="btn btn-toggle">
+              Dashboard
+            </button>
+          </li>
+          <li class="mb-1">
+            <button class="btn btn-toggle">
+              Email Template
+            </button>
+          </li>
+          <li class="border-top my-3"></li>
+          <li class="mb-1">
+            <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse"
+              data-bs-target="#User_interface-collapse" aria-expanded="false">
+              User-interface
+            </button>
+            <div class="collapse" id="User_interface-collapse">
+              <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                <li><a href="#" class="link-dark rounded">Widget</a></li>
+                <li><a href="#" class="link-dark rounded">Elements</a></li>
+                <li><a href="#" class="link-dark rounded">Forms</a></li>
+                <li><a href="#" class="link-dark rounded">Icon Packs</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="mb-1">
+            <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse"
+              data-bs-target="#components-collapse" aria-expanded="false">
+              Components
+            </button>
+            <div class="collapse" id="components-collapse">
+              <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                <li><a href="#" class="link-dark rounded">To-do-list</a></li>
+                <li><a href="#" class="link-dark rounded">Gallery</a></li>
+                <li><a href="#" class="link-dark rounded">GoogleMaps</a></li>
+                <li><a href="#" class="link-dark rounded">Calander</a></li>
+                <li><a href="#" class="link-dark rounded">Charts</a></li>
+                <li><a href="#" class="link-dark rounded">CSS3 Animations</a></li>
+                <li><a href="#" class="link-dark rounded">Tree View Lists</a></li>
+                <li><a href="#" class="link-dark rounded">Nestable & Sortable Lists</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="mb-1">
+            <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse"
+              data-bs-target="#UI_layout-collapse" aria-expanded="false">
+              UI Layout
+            </button>
+            <div class="collapse" id="UI_layout-collapse">
+              <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                <li><a href="#" class="link-dark rounded">Overview</a></li>
+                <li><a href="#" class="link-dark rounded">Weekly</a></li>
+                <li><a href="#" class="link-dark rounded">Monthly</a></li>
+                <li><a href="#" class="link-dark rounded">Annually</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="mb-1">
+            <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse"
+              data-bs-target="#Extra_Pages-collapse" aria-expanded="false">
+              Extra Pages
+            </button>
+            <div class="collapse" id="Extra_Pages-collapse">
+              <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                <li><a href="#" class="link-dark rounded">Overview</a></li>
+                <li><a href="#" class="link-dark rounded">Weekly</a></li>
+                <li><a href="#" class="link-dark rounded">Monthly</a></li>
+                <li><a href="#" class="link-dark rounded">Annually</a></li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="mb-1">
+            <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse"
+              data-bs-target="#orders-collapse" aria-expanded="false">
+              Orders
+            </button>
+            <div class="collapse" id="orders-collapse">
+              <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                <li><a href="#" class="link-dark rounded">New</a></li>
+                <li><a href="#" class="link-dark rounded">Processed</a></li>
+                <li><a href="#" class="link-dark rounded">Shipped</a></li>
+                <li><a href="#" class="link-dark rounded">Returned</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="border-top my-3"></li>
+          <li class="mb-1">
+            <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse"
+              data-bs-target="#account-collapse" aria-expanded="false">
+              Account
+            </button>
+            <div class="collapse" id="account-collapse">
+              <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                <li><a href="#" class="link-dark rounded">New...</a></li>
+                <li><a href="#" class="link-dark rounded">Profile</a></li>
+                <li><a href="#" class="link-dark rounded">Settings</a></li>
+                <li><a href="#" class="link-dark rounded">Sign out</a></li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+    </section>
+    <section id="main-content" class="col">
+      <div class="row">
+        <div class="card col">
+          <img src="..." class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+              content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+        <div class="card col">
+          <img src="..." class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+              content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+        <div class="card col">
+          <img src="..." class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+              content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+        <div class="card col">
+          <img src="..." class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+              content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="card border-success mb-3 col-8">
+          <div class="card-header bg-transparent border-success">Header</div>
+          <div class="card-body text-success">
+            <h5 class="card-title">Success card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+              content.</p>
+          </div>
+          <div class="card-footer bg-transparent border-success">Footer</div>
+        </div>
+
+        <div class="card border-success mb-3 col-4">
+          <div class="card-header bg-transparent border-success">Header</div>
+          <div class="card-body text-success">
+            <h5 class="card-title">Success card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+              content.</p>
+          </div>
+          <div class="card-footer bg-transparent border-success">Footer</div>
+
+          <div class="row">
+            <div class="card mb-3 col">
+              <img src="..." class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Followers</h5>
+                <p class="card-text">98k</p>
+                
+              </div>
+            </div>
+            <div class="card mb-3 col">
+              <img src="..." class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Active Servers</h5>
+                <p class="card-text">15</p>
+                
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <div class="row">
+
+        <div class="card border-success mb-3 col">
+          <div class="card-header bg-transparent border-success">Header</div>
+          <div class="card-body text-success">
+            <h5 class="card-title">Success card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+              content.</p>
+          </div>
+          <div class="card-footer bg-transparent border-success">Footer</div>
+        </div>
+        <div class="card border-success mb-3 col">
+          <div class="card-header bg-transparent border-success">Header</div>
+          <div class="card-body text-success">
+            <h5 class="card-title">Success card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+              content.</p>
+          </div>
+          <div class="card-footer bg-transparent border-success">Footer</div>
+        </div>
+        <div class="card border-success mb-3 col">
+          <div class="card-header bg-transparent border-success">Header</div>
+          <div class="card-body text-success">
+            <h5 class="card-title">Success card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+              content.</p>
+          </div>
+          <div class="card-footer bg-transparent border-success">Footer</div>
+        </div>
+
+
+      </div>
+    </section>
+  </div>
+  <section id="footer">
+    <div class="container-fluid">
+      <footer class="d-flex flex-wrap justify-content-center align-items-center py-3 my-4 border-top">
+        <p class="text-muted">2022, Bhupen Batra</p>
+      </footer>
+    </div>
+  </section>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
