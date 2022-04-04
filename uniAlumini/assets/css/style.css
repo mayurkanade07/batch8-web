@@ -22,11 +22,10 @@ a.can-btn:hover {
 
 .nav-text-wrap a:hover {
     background: #dbe5f3;
-    padding: 2.1rem 0.4rem;
-    border-bottom: 0.4rem solid blue;
-    color: #3b60c9;
-    margin-block-end: -95rem;
-    margin-block-start: -1.8rem;
+    padding: 2.1rem 0.6rem;
+    border-bottom: 0.4rem solid rgb(32, 32, 91);
+    margin-block-end: -16px;
+    margin-block-start: -16px;
     margin-right: 10px;
 }
 
