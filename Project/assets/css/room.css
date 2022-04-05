@@ -1,0 +1,56 @@
+body{
+    background-color: #f4f4f4;
+    color: #111118;
+    font-size: 16px;
+    line-height: 1.5;
+}
+.nav-img .caption{
+    position: absolute;
+    top: 0;
+    text-align: center;
+    margin-left: 25rem;
+    padding: 100px;
+    color:rgb(25, 52, 225);
+}
+
+.room-details .breadcrumb a{
+    text-decoration: none;
+    color: black;
+}
+
+.room-details .breadcrumb span{
+    opacity: 0.6;
+}
+
+.room-details .room-icon i{
+    border: 1px solid gray;
+    border-radius: 50%;
+    padding: 10px;
+    font-size: 16px;
+    margin-right: 10px;
+    color: black;
+
+}
+
+.room-details .row {
+    display: table;
+    
+
+}
+
+.room-details .img-block{
+    padding: 30px;
+}
+
+.room-details [class*="col-"] {
+    float: none;
+    display: table-cell;
+    vertical-align: top;
+}
+
+.room-details .text-block{
+    padding: 30px;
+    line-height: 2.5rem;
+    font-size: 20px;
+} 
+
