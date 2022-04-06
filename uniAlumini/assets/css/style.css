@@ -286,3 +286,22 @@ button.gallery-btn:hover {
 li {
     font-size: 1rem;
 }
+
+
+/* Contact Us page */
+
+#page-title-contactUs {
+    background-image: url(/uniAlumini/assets/images/contact-us.jpg);
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+    padding: 150px 0px;
+    z-index: 1;
+    background-color: black;
+    opacity: 0.5;
+}
+
+.contact-us-wrap h1 {
+    font-size: 4rem;
+    font-weight: 700;
+}
