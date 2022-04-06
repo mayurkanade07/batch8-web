@@ -1,6 +1,7 @@
 body {
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
 }
 
 .header_content {
@@ -29,14 +30,14 @@ a.can-btn:hover {
     margin-right: 10px;
 }
 
-
-/* .ml-auto {
-    margin-left: auto !important;
-} */
-
 .nav-text-wrap ul,
 li {
     font-size: 2rem;
+}
+
+.main-menu {
+    position: sticky;
+    top: 0;
 }
 
 
@@ -70,11 +71,6 @@ li {
     /* background-size: cover; */
     /* background-color: #000;
     opacity: 0.7; */
-}
-
-.slider-text-wrap h1 {
-    font-size: 5rem;
-    font-weight: 700;
 }
 
 .btn-cust-style-head {
@@ -112,6 +108,12 @@ li {
     text-align: center;
     font-size: x-large;
     font-weight: bolder;
+}
+
+.vertical-menu-wrap {
+    display: flex;
+    flex-direction: column;
+    margin-top: 6rem;
 }
 
 .event-img {
@@ -295,13 +297,21 @@ li {
     background-size: cover;
     background-position: center center;
     position: relative;
-    padding: 150px 0px;
-    z-index: 1;
+    padding: 177px 0px;
     background-color: black;
     opacity: 0.5;
 }
 
-.contact-us-wrap h1 {
-    font-size: 4rem;
-    font-weight: 700;
+.form-innner input[type="text"],
+input[type="email"] {
+    width: 70%;
+}
+
+.main-wrap-contact {
+    box-shadow: 0 3px 30px 0 rgb(0 0 0 / 10%);
+}
+
+.map-wrap iframe {
+    width: 500px;
+    height: 550px;
 }
